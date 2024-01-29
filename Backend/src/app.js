@@ -1,7 +1,9 @@
 const express = require('express');
+const PORT = 3333;
 
 const app = express();
 
 app.get('/', (request, response) => response.status(200).send("Olá, Mundo!"))
 
-app.listen(3333, () => console.log('Serve no port 3333'));
+
+module.exports = app;
