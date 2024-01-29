@@ -1,4 +1,7 @@
-
 const app = require('./app');
 
-app.listen(3333, () => console.log('Serve no port 3333, boa'));
+const dotenv = require('dotenv');
+dotenv.config();
+const PORT = process.env.PORT
+
+app.listen(PORT, () => console.log(`Serve no port ${PORT}, boa, legal`));
