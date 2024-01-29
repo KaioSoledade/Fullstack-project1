@@ -1,9 +1,9 @@
 const express = require('express');
-const PORT = 3333;
+const router = require("./router.js");
 
 const app = express();
 
-app.get('/', (request, response) => response.status(200).send("Olá, Mundo!"))
-
+app.use(router);
 
 module.exports = app;
+
